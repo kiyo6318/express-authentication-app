@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>新規登録ページ</title>
+  </head>
+  <body>
+    <h2>新規登録</h2>
+    <% if (err_message) { %>
+    <h3><%= err_message %></h3>
+    <% } %>
+    <form action="/signup" method="POST">
+      <input type="hidden" name="_token" value="<%= csrfToken %>" />
+      <input type="text" name="name" placeholder="name" />
+      <input type="password" name="password" placeholder="password" />
+      <button type="submit">登録</button>
+    </form>
+    <a href="login"> 既にアカウントをお持ちの方はこちら </a>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ログインページ</title>
+  </head>
+  <body>
+    <h2>ログイン</h2>
+    <% if (err_message) { %>
+    <h3><%= err_message %></h3>
+    <% } %>
+    <form action="/login" method="POST">
+      <input type="text" name="name" placeholder="name" />
+      <input type="password" name="password" placeholder="password" />
+      <button type="submit">ログイン</button>
+    </form>
+    <a href="signup"> アカウントをお持ちでない方はこちら </a>
+  </body>
+</html>
